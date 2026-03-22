@@ -8,45 +8,51 @@ function ProductCard({ item }) {
   return (
 
     <div
-      className="card mb-3"
-      style={{ cursor: "pointer" }}
+      className="card h-100"
+      style={{
+        cursor: "pointer",
+        height: "100%"
+      }}
       onClick={() => navigate(`/product/${item.id}`)}
     >
 
-      <div className="row g-0 align-items-center">
+      <div
+        style={{
+          height: "200px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <img
+          src={item.image}
+          alt=""
+          style={{
+            maxHeight: "180px",
+            objectFit: "contain"
+          }}
+        />
+      </div>
 
-        {/* Image */}
-        <div className="col-md-4 text-center">
-          <img
-            src={item.image}
-            alt=""
-            style={{
-              height: "120px",
-              objectFit: "contain"
-            }}
-          />
-        </div>
+      <div className="card-body">
 
-        {/* Text */}
-        <div className="col-md-8">
+        <h6
+          className="card-title"
+          style={{
+            height: "50px",
+            overflow: "hidden"
+          }}
+        >
+          {item.title}
+        </h6>
 
-          <div className="card-body">
+        <p className="text-success fw-bold">
+          ₹ {Math.round(item.price * 83)}
+        </p>
 
-            <h6 className="card-title">
-              {item.title}
-            </h6>
-
-            <p className="text-success fw-bold">
-              ₹ {Math.round(item.price * 83)}
-            </p>
-
-            <p className="text-muted">
-              {item.category}
-            </p>
-
-          </div>
-
-        </div>
+        <p className="text-muted">
+          {item.category}
+        </p>
 
       </div>
 
