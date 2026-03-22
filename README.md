@@ -56,7 +56,8 @@ npm start
 
 ## Live Demo
 
-Vercel Link:
+Vercel Link: front-end-project-topaz-tau.vercel.app
 
 ## GitHub Repository
 
+https://github.com/kushika0/Front-end-Project
